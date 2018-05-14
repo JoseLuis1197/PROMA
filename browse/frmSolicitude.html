@@ -1,151 +1,393 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Perú - pizarra</title>
+    <title>Perú - Detalle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.css" />
     
 </head>
 <body>
-    <!-- Cabecera-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-workBlue" id="navbarMain">
-        <a class="navbar-brand" href="main.html">Perú</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Primera parte-->
-            <ul class="navbar-nav mr-auto">               
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Metodología</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        Solicitudes
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <span class="dropdown-item-text">Recientes</span>
-                        <a class="dropdown-item" href="#">Solicitud 1</a>
-                        <a class="dropdown-item" href="#">Solicitud 2</a>
-                        <div class="dropdown-divider"></div>
-                        <span class="dropdown-item-text">Asignadas</span>
-                        <a class="dropdown-item" href="#">Solicitud 3</a>
-                        <a class="dropdown-item" href="#">Solicitud 4</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        Pizarras
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-            <!-- Parte de creación y búsqueda-->
-            <ul class="navbar-nav">                
-                <li class="nav-item" >
-                    <button class="btn btn-primary btn-sm mr-sm-2" type="submit">Crear</button>
-                </li>
-                <li class="nav-item">
-                    <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Busca algo..." aria-label="Search">
-                </li>
-            </ul>
-
-            <!-- Sección de configuración, login y ayuda con íconos-->
-            <ul class="navbar-nav">
-                <li class="nav-item" style="margin-left: 6px">                    
-                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="¿Necesitas ayuda?">
-                        <img src="../icons/Help - 02.png" class="mr-sm-2 ml-sm-2">
-                    </a>
-                </li> 
-                <li class="nav-item">                    
-                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Configuración de cuenta">
-                        <img src="../icons/Settings - 09.png" class="mr-sm-2 ml-sm-2">
-                    </a>
-                </li>                
-                <li class="nav-item">                    
-                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Configuración de usuario">
-                        <img src="../icons/User Settings.png" class="mr-sm-2 ml-sm-2">
-                    </a>
-                </li>              
-            </ul>
-        </div>
-    </nav>
-    <br/>
-
-    <div data-spy="scroll" data-target="#navbarMain" data-offset="0">
-        <!--Sección de ticket: picture, #ticket, nombre solicitud-->
-        <div class="container mb-md-4">
-            <div class="row ">
-                <div class="col-2" style="text-align: center">
-                    <img src="../icons/Image_01.png">
-                </div>
-                <div class="col-10">
-                    <div class="row">
-                        <a href="#">Equipo tasma</a> &nbsp; / &nbsp; <a href="#">ticket-123</a>
-                    </div>
-                    <div class="row">
-                        <h3>Creación de HU</h3>
-                    </div>
-                </div>
-            </div>                    
-        </div>                
-
-        <!--Sección de botones: editar, comentar, asignar, flujo de trabajo, pizarra-->                
-        <div class="container">
-            <div class="row pl-md-4">
-                <button type="button" class="btn btn-light btn-sm">
-                    <img src="../icons/Data-Edit.png">Editar
-                </button>                       
-                <button type="button" class="btn btn-light btn-sm ml-md-4">
-                    <img src="../icons/Messages-Information-01.png">Comentar
-                </button>
-                <button type="button" class="btn btn-light btn-sm ml-md-4">Asignar</button>
-                <button type="button" class="btn btn-light btn-sm ml-md-4">Fujo de trabajo</button>
-                <button type="button" class="btn btn-light btn-sm ml-md-4">
-                    <img src="../icons/Black-Board-WF.png">Pizarra
-                </button>                        
+    <!-- Cabecera - Menú de navegación-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-workBlue" id="navbarMain">
+            <a class="navbar-brand" href="main.html">Perú</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Primera parte-->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Metodología</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Solicitudes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <span class="dropdown-item-text">Recientes</span>
+                            <a class="dropdown-item" href="#">Solicitud 1</a>
+                            <a class="dropdown-item" href="#">Solicitud 2</a>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item-text">Asignadas</span>
+                            <a class="dropdown-item" href="#">Solicitud 3</a>
+                            <a class="dropdown-item" href="#">Solicitud 4</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Pizarras
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Parte de creación y búsqueda-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn btn-primary btn-sm mr-sm-2" type="submit">Crear</button>
+                    </li>
+                    <li class="nav-item">
+                        <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Busca algo..." aria-label="Search">
+                    </li>
+                </ul>
+        
+                <!-- Sección de configuración, login y ayuda con íconos-->
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-left: 6px">
+                        <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="¿Necesitas ayuda?">
+                            <img src="../icons/Help - 02.png" class="mr-sm-2 ml-sm-2">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Configuración de cuenta">
+                            <img src="../icons/Settings - 09.png" class="mr-sm-2 ml-sm-2">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Configuración de usuario">
+                            <img src="../icons/User Settings.png" class="mr-sm-2 ml-sm-2">
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <hr>
-        </div>
+        </nav>
+    </header>    
 
-
-        
-        
-        <!--Sección de scroll-up: detalles, descripción, actividad, personas, fechas, etc.-->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-9">                            
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Detalles 
-                    </button>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    <section>
+        <div data-spy="scroll" data-target="#navbarMain" data-offset="0">
+            <!--Sección de ticket: picture, #ticket, nombre solicitud-->
+            <div class="container">
+                <div class="row ">
+                    <div class="col-1" style="text-align: center">
+                        <img src="../icons/Image_01.png">
+                    </div>
+                    <div class="col-11">
+                        <div class="row">
+                            <a href="#">Equipo tasma</a> &nbsp; / &nbsp;
+                            <a href="#">ticket-123</a>
+                        </div>
+                        <div class="row">
+                            <h3>Creación de HU</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
-                    One of three columnsfrfrgrgrtgtggeeeeeeeeeeeeeeeeegrgr
-                    euifbyufwfgywgwgyrgyfgrgrygrgregergberh
-                    eruogberiygbryigyergyiergegierhgyrgyrgr
-                    eruhguierhgyregherhgeryhg
+            </div>
+        
+            <!--Sección de botones: editar, comentar, asignar, flujo de trabajo, pizarra-->
+            <div class="container command-bar">
+                <div class="row pl-md-4">
+                    <button type="button" class="btn btn-light btn-sm">
+                        <img src="../icons/Data-Edit.png">&nbsp; Editar
+                    </button>
+                    <button type="button" class="btn btn-light btn-sm ml-md-4">
+                        <img src="../icons/Messages-Information-01.png">&nbsp; Comentar
+                    </button>
+                    <button type="button" class="btn btn-light btn-sm ml-md-4">Asignar</button>
+                    <button type="button" class="btn btn-light btn-sm ml-md-4">Fujo de trabajo</button>
+                    <button type="button" class="btn btn-light btn-sm ml-md-4">
+                        <img src="../icons/Black-Board-WF.png">&nbsp; Pizarra
+                    </button>
+                </div>
+                <hr>
+            </div>
+        
+            <!--Sección de scroll-up: detalles, descripción, actividad, personas, fechas, etc.-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <!--Sección de Detalle-->
+                        <div>
+                            <h6 class="toggle-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Detalles
+                            </h6>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="labelColoring">Tipo:</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <img src="../icons/BookMarks.png"> Historia
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="labelColoring">Prioridad:</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <img src="../icons/ArrowUp-WF.png"> Alta
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="labelColoring">Etiquetas:</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <img src="../icons/Tag-07.png">
+                                        <span class="badge badge-tag">proyectos </span>
+                                        <span class="badge badge-tag">historia usuario</span>
+                                        <span class="badge badge-tag">SEDIPRO</span>
+                                        <span class="badge badge-tag">Otras etiquetas</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="labelColoring">Definition of Done (DoD):</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <span class="badge badge-primary mb-1">2/10 EN PROGRESO</span>
+                                        <div class="progress mb-2" style="height:5px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Permiso gestionado
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                                    <label class="form-check-label" for="defaultCheck2">
+                                                        Auditorio separado
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                                    <label class="form-check-label" for="defaultCheck3">
+                                                        Evento realizado
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+        
+        
+        
+        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="labelColoring">Tipo de ítem:</label>
+                                    </div>
+                                    <div class="col-10">
+                                        Funcional
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="labelColoring">Documentación</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <a class="font-italic" href="htts://someDocument.html">htts://someDocument.html</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="labelColoring">Repositorio:</label>
+                                    </div>
+                                    <div class="col-10">
+                                        <a class="font-italic" href="htts://someRepository.html">htts://someRepository.html</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Sección de Descripción-->
+                        <div>
+                            <h6 data-toggle="collapse" data-target="#collapseDescription" aria-expanded="true" aria-controls="collapseOne">
+                                Descripción
+                            </h6>
+                            <div id="collapseDescription" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>
+                                    El proyecto consiste en la gestión de un proyecto ágil bajo el frameWork Scrum. Este proyecto es netamente opensource y se
+                                    debe distribuir bajo la licencia MIT.
+                                </p>
+        
+                            </div>
+                        </div>
+        
+                        <!--Sección de Actividad-->
+                        <div>
+                            <h6 data-toggle="collapse" data-target="#collapseActivities" aria-expanded="true" aria-controls="collapseOne">
+                                Actividad
+                            </h6>
+                            <div id="collapseActivities" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        
+                                <!--Panel: Todo, Comentarios, Transiciones-->
+                                <!--Panel principal-->
+                                <ul class="nav nav-tabs" id="tabActivitiesTracking" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="tabAll" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Todo</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="tabComments" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comentarios</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="tabTransitions" data-toggle="tab" href="#transitions" role="tab" aria-controls="transitions" aria-selected="false">Transiciones</a>
+                                    </li>
+                                </ul>
+                                <!--Panel del cuerpo-->
+                                <div class="tab-content" id="tabActivitiesTrackingContent">
+                                    <div class="tab-pane fade " id="all" role="tabpanel" aria-labelledby="tabAll">
+                                        <p>ifrurhu</p>
+                                    </div>
+                                    <div class="tab-pane fade show active" id="comments" role="tabpanel" aria-labelledby="tabComments">
+        
+                                        <div class="container">
+                                            <div>
+        
+                                            </div>
+        
+                                        </div>
+        
+        
+        
+                                        <p>222222222222rhu</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="transitions" role="tabpanel" aria-labelledby="tabTransitions">
+                                        <p>3333333333333</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <!--Sección de Personas-->
+                        <div>
+                            <h6 data-toggle="collapse" data-target="#collapsePeople" aria-expanded="true" aria-controls="collapsePeople">
+                                Personas
+                            </h6>
+                            <div id="collapsePeople" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="row">
+                                    <dl>
+                                        <dt>
+                                            <label class="labelColoring">Responsable:</label>
+                                        </dt>
+                                        <dd>
+                                            <img class="img-fit-16" src="../icons/File-Format-JPEG.png">                                                                                       
+                                            <label>José Luis Proaño Sipán</label> 
+                                            
+                                        </dd>
+                                    </dl>
 
+                                   
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label class="labelColoring">Informador:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="row">                                            
+                                            <img class="img-fit-16" src="../icons/File-Format-JPEG.png">                                                                               
+                                            <label>Eduardo Proaño Sipán</label>                                            
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Sección de Fechas-->
+                        <div>
+                            <h6 data-toggle="collapse" data-target="#collapseDate" aria-expanded="true" aria-controls="collapsePeople">
+                                Fechas
+                            </h6>
+                            <div id="collapseDate" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label class="labelColoring">Responsable:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img src="../icons/File-Format-JPEG.png">
+                                            </div>
+                                            <div class="col-11">
+                                                <label>José Luis Proaño Sipán</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <a href="https//perfilJose.html">Asignarme a mi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Sección de Seguimieto del tiempo-->
+                        <div>
+                            <h6 data-toggle="collapse" data-target="#collapseTimeTracking" aria-expanded="true" aria-controls="collapsePeople">
+                                Seguimiento del tiempo
+                            </h6>
+                            <div id="collapseTimeTracking" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label class="labelColoring">Responsable:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img src="../icons/File-Format-JPEG.png">
+                                            </div>
+                                            <div class="col-11">
+                                                <label>José Luis Proaño Sipán</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <a href="https//perfilJose.html">Asignarme a mi</a>
+                                        </div>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+        
                 </div>
             </div>
-        </div>                            
-    </div>
+        
+            <!--Botón para realizar un comentario-->
+            <div class="container">
+                <button type="button" class="btn btn-light btn-sm">
+                    <img src="../icons/Messages-Information-01.png">&nbsp; Comentar
+                </button>
+            </div>
+        
+        </div>
+    </section>
+
     
 
     <!-- Bootstrap core JavaScript
