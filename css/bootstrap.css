@@ -593,6 +593,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  vertical-align: middle;
 }
 
 .no-gutters {
@@ -4776,6 +4777,13 @@ input[type="button"].btn-block {
   padding-right: 0.6em;
   padding-left: 0.6em;
   border-radius: 10rem;
+}
+
+.badge-darkYellow {
+  color: #F1C232;
+  background-color: rgba(87, 43, 18, 0.671);
+  border: 1px solid transparent;  
+  border-color: lightgray;
 }
 
 .badge-tag {
@@ -9024,10 +9032,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
-.labelColoring {
-  color: darkgrey;
-}
-
 /*
 *Tipo: checkbox
 *Título: Finalizar tarea
@@ -9038,6 +9042,10 @@ input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   transition: all .1s;
   color: var(--gray-dark);
+}
+
+.labelColoring {
+  color: darkgrey;
 }
 
 section {
