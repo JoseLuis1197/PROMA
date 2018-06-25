@@ -15,64 +15,90 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/floating-labels.css" rel="stylesheet">
+
+    <!-- Custom styles for this template in Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../css/material-icons.css" rel="stylesheet">
+
 </head>
 
-<body>
-    <form class="form-signin">
-        <div class="text-center mb-4">
-            <img class="mb-4" src="../icons/Ubuntu.svg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Inicio de sesión</h1>            
+<body> 
+
+    <div class="container">
+        <!-- Alerta para envío de contraseña a correo -->
+        <div class="row justify-content-md-center">
+            <div class="alert alert-success" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4>Envío realizado</h4>
+                <p>Se realizó con éxito el envío de tu nueva contraseña. Por favor verifica tu bandeja principal y spam.
+                </p>
+                <hr> Suerte!
+            </div>
         </div>
-
-        <div class="form-label-group">
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputEmail">Correo electrónico</label>
-        </div>
-
-        <div class="form-label-group">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <label for="inputPassword">Contraseña</label>
-        </div>
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Recuérdame
-            </label>
-        </div>
-
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
-
-        <div class="row float-right">            
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#sendPassword">¿Olvidaste tu contraseña?</button>
-        </div>        
-        <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
-    </form>
-
-    <!-- Envío de contraseña por correo -->
-    <div class="modal fade" id="sendPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Recuperación de contraseña</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+        
+        <!-- Formulario de inicio de sesión -->
+        <div class="row">
+            <form class="form-signin">
+                <div class="text-center mb-4">
+                    <i class="material-icons md-48">fingerprint</i>
+                    <h1 class="h3 mb-3 font-weight-normal">Inicio de sesión</h1>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="emailRecover" class="col-form-label">Correo electrónico:</label>
-                            <input type="text" class="form-control" id="emailRecover">
-                        </div>                       
-                    </form>
+        
+                <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputEmail">Correo electrónico o ID de usuario</label>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Enviar nueva contraseña</button>
+        
+                <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">Contraseña</label>
+                </div>
+        
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recuérdame
+                    </label>
+                </div>
+        
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+        
+                <div class="row float-right">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#sendPassword">¿Olvidaste tu contraseña?</button>
+                </div>
+                <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+            </form>
+        </div>
+        
+        <!-- Envío de contraseña por correo -->
+        <div class="modal fade" id="sendPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Recuperación de contraseña</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="emailRecover" class="col-form-label">Correo electrónico:</label>
+                                <input type="text" class="form-control" id="emailRecover" placeholder="Correo electrónico">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Enviar nueva contraseña</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <!-- CSS Javascript -->
     <!-- <script src="js/bootstrap.js"></script> -->
@@ -81,9 +107,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-    
-
+        crossorigin="anonymous"></script>   
 </body>
 
 </html>
